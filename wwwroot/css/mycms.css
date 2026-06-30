@@ -482,8 +482,8 @@ tr.pend-row-done:hover { background: #e2f5e9 !important; }
    ═══════════════════════════════════════════════════════════ */
 
 .card-header-cms {
-    background-color: var(--cms-blue);
-    color: #fff;
+    background-color: var(--cms-blue) !important;
+    color: #fff !important;
     border-radius: .5rem .5rem 0 0 !important;
     padding: .75rem 1rem;
     font-weight: 600;
