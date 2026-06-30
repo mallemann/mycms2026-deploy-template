@@ -56,19 +56,15 @@ After login, go to **Admin → Site Configuration** to configure your SMTP serve
 
 ---
 
-## Subdirectory Deployment (PathBase)
+## Subdirectory Deployment
 
-If you deploy under a subdirectory (e.g. `https://example.com/mycms/`), add the following to your `web.config` to set the path base:
+If you deploy under a subdirectory (e.g. `https://example.com/mycms/`), create the folder as an **IIS Application** (not just a virtual directory). IIS will then automatically pass the path prefix to the app — no changes to `web.config` or `appsettings.json` required.
 
-```xml
-<aspNetCore>
-  <environmentVariables>
-    <environmentVariable name="ASPNETCORE_PATHBASE" value="/mycms" />
-  </environmentVariables>
-</aspNetCore>
+If for some reason the path prefix is not passed automatically, you can set it explicitly in `appsettings.json`:
+
+```json
+"PathBase": "/mycms"
 ```
-
-Or configure a reverse proxy to forward the `X-Forwarded-Prefix` header.
 
 ---
 
