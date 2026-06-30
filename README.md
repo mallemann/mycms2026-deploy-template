@@ -1,6 +1,7 @@
 # MyCMS2026
 
-A lightweight, file-based CMS built on ASP.NET Core / Razor Pages. No database required — all data is stored as JSON files in `App_Data/`.
+A lightweight, file-based CMS (Collaboration and Content Management System) built on ASP.NET Core / Razor Pages. No database required — all data is stored as JSON files in `App_Data/`.
+For Teams to collaborate on Projects, Tasks, Meetings, OKRs, Files.
 
 ![MyCMS2026 Dashboard](TopIMG.png)
 
