@@ -28,6 +28,10 @@ For Teams to collaborate on Projects, Tasks, Meetings, OKRs, Files.
 
 ---
 
+## Resilience
+
+All data is stored as JSON files under `App_Data/`. Files attached to tasks and meetings are kept in `App_Data/uploads/` in a subfolder named after the task or meeting number. This makes it straightforward to build import tools that migrate metadata and attachments to any other system. All data is human-readable and manageable without MyCMS.
+
 ## Installation
 
 ### 1. Download
@@ -95,10 +99,17 @@ appsettings.json
 
 ## Updating
 
-1. Publish a new version from Visual Studio
-2. Copy all files **except `App_Data/`** to your server
-3. Restart the IIS application pool
+1. Copy all files **except `App_Data/`** to your server
+2. Restart the IIS application pool or user app_offline.html to force restart
 
+## Reset
+
+1. Delete all files in APP_Data beside App_Data/demo
+2. Navigate to your URL, the setup Process starts again
+
+## Backup
+
+1. Just copy all Files from App_Data 
 ---
 
 ## License
