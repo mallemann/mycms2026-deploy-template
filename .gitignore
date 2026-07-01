@@ -1,0 +1,19 @@
+# ================================================================
+# MyCMS2026 Deploy Template — .gitignore
+# ================================================================
+
+# Laufzeitdaten — nie einchecken (werden beim Setup erstellt)
+App_Data/*.json
+App_Data/setup-complete
+App_Data/uploads/
+App_Data/pages/
+
+# Demo-Daten dürfen eingecheckt werden
+!App_Data/demo/
+!App_Data/demo/*.json
+
+# Secrets — nie einchecken
+appsettings.Production.json
+
+# Debug-Symbole (kein Nutzen im Deployment-Paket)
+*.pdb
